@@ -3,5 +3,17 @@
 }
 
 .input-area {
-  padding: 2rem;
+  padding: 1em;
+  min-width: 80%;
+}
+
+ul {
+  display: inline;
+  list-style: none;
+}
+
+.emoji-area {
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
