@@ -37,10 +37,14 @@ function App() {
   const emojiClickHandler = (userInputEmoji) => {
     setMeaning(emojiDictionary[userInputEmoji]);
   }
-  
+
   return (
     <div className='App'>
-      <h1>Emoji Interpreter</h1>
+      <nav>
+        <div className="nav-heading">
+          Emoji Interpreter
+        </div>
+      </nav>
 
       <input onChange={ emojiInputChangeHandler } value={userInputEmoji} placeholder="Put an emoji here to show the meaning" 
         className="input-area"></input> 

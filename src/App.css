@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+  --primary:  #AEE2FF;
+  --yellow: #F5EA5A;
+  --black:  #000000;
+  --width-break: 600px ;
+}
+
 .App {
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .input-area {
+  margin-top: 5vh;
   padding: 1em;
-  min-width: 80%;
+  min-width: 60%;
+  text-align: center;
 }
 
 ul {
@@ -16,4 +28,16 @@ ul {
   font-size: 2rem;
   padding: 0.5rem;
   cursor: pointer;
+}
+
+nav {
+  display: block;
+  border: 2px solid #7286D3;
+  background-color: var(--primary);
+  text-align: center;
+}
+
+.nav-heading {
+  font-size: 3rem; 
+  padding: 1rem;
 }
