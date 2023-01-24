@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+//emoji dictionary for meanings......
 const emojiDictionary = {
   "😊": "Smiling",
   "😳": "disbelief",
@@ -10,14 +11,16 @@ const emojiDictionary = {
   "😑": "annoyance" 
 };
 
-
+//converting Object Keys into Array.....
 const emojisArray = Object.keys(emojiDictionary);
 
 function App() {
-
+  
+  // useState Hooks for setting Emoji Input into View....
   let [ userInputEmoji, setUserInputEmoji ] = useState("");  
   let [ meaningEmoji, setMeaning ] = useState("Meaning will appear here....!");
   
+  //function for handling the functionality of the input area and meaning area.....
   const emojiInputChangeHandler = (event) => {
     let userInputEmoji = event.target.value;
     setUserInputEmoji(userInputEmoji);
@@ -30,6 +33,7 @@ function App() {
     }
   }
 
+  //function for handling click event of emoji buttons....
   const emojiClickHandler = (userInputEmoji) => {
     setMeaning(emojiDictionary[userInputEmoji]);
   }
@@ -47,10 +51,10 @@ function App() {
       <div> <h2>{ meaningEmoji } </h2> </div>{}
       {
         emojisArray.map((emoji) => (
-          <span
-            onClick={() => emojiClickHandler(emoji)} className="emoji-area">
+          <span onClick={() => emojiClickHandler(emoji)} className="emoji-area">
             {" "}
-            {emoji}{" "}
+            {emoji}
+            {" "}
           </span>
         ))
       }
